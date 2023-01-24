@@ -86,7 +86,7 @@ By specifying `After=network-online.target` we tell systemd that the program mus
 
 In addition we also give a `Wants=network-online.target`. It specifies that this unit must be started only if the `network-online.target` unit starts. Otherwise, this unit is not started as well.
 
-**Notice the subtle difference here**. `After=` and `Wants=` are defined independently, and do their specific jobs. The `Wants=` does not specify an order in which the service should start, only a dependency. Whereas, the `After=` helps us specify the order. More details here: (https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/)[https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/]
+**Notice the subtle difference here**. `After=` and `Wants=` are defined independently, and do their specific jobs. The `Wants=` does not specify an order in which the service should start, only a dependency. Whereas, the `After=` helps us specify the order. More details here: https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget
 
 There are several such Options that can configured, I will let you do your research: [[Unit] Section Options](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#%5BUnit%5D%20Section%20Options)
 
