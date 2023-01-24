@@ -1,0 +1,13 @@
+[Unit]
+Description=My Example App with FastAPI server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=utkarsh
+EnvironmentFile=/opt/my_example_app/env
+ExecStart=$HOME/.local/bin/my_example_app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
